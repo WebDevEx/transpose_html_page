@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    table tr:first-child {
+    color: #FFFFFF;
+    background-color: #639187;
+    }
+
+    table tr td:first-child {
+    color: #FFFFFF;
+    background-color: #639187;
+    
+    }
+    td{
+        width: 25px;
+    }
+</style>
+
+</head>
+<body>  
+  <label>Header:</label>
+  <input type="text" id="theader"><br><br>
+  <label>Footer:</label>
+  <input type="text" id="tfooter"><br><br>    
+      <table cellspacing="0" border="1" id="transposed">
+        <tbody>
+          <tr>
+            <td></td>
+            <td colspan="1">9:00</td>
+            <td colspan="1">9:15</td>
+            <td colspan="1">9:30</td>
+            <td colspan="1">9:45</td>
+            <td colspan="1">10:00</td>
+            <td colspan="1">10:15</td>
+            <td colspan="1">10:30</td>
+            <td colspan="1">10:45</td>
+            <td colspan="1">11:00</td>
+            <td colspan="1">11:15</td>
+            <td colspan="1">11:30</td>
+            <td colspan="1">11:45</td>
+            <td colspan="1">12:00</td>
+            <td colspan="1">12:15</td>
+            <td colspan="1">12:30</td>
+            <td colspan="1">12:45</td>
+            <td colspan="1">13:00</td>
+            <td colspan="1">13:15</td>
+            <td colspan="1">13:30</td>
+            <td colspan="1">13:45</td>
+            <td colspan="1">14:00</td>
+            <td colspan="1">14:15</td>
+            <td colspan="1">14:30</td>
+            <td colspan="1">14:45</td>
+            <td colspan="1">15:00</td>
+            <td colspan="1">15:15</td>
+            <td colspan="1">15:30</td>
+            <td colspan="1">15:45</td>
+            <td colspan="1">16:00</td>
+            <td colspan="1">16:15</td>
+            <td colspan="1">16:30</td>
+            <td colspan="1">16:45</td>
+            <td colspan="1">17:00</td>
+            <td colspan="1">17:15</td>
+            <td colspan="1">17:30</td>
+            <td colspan="1">17:45</td>
+            <td colspan="1">18:00</td>
+          </tr>
+      
+          <tr>
+            <td rowspan="1">Madrid</td>
+            <td style="background-color: rgb(204, 204, 204);" colspan="4" rowspan="1"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="background-color: rgb(204, 204, 204);" colspan="4" rowspan="1"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td rowspan="1">London</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="background-color: rgb(204, 204, 204);" colspan="4" rowspan="1"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="background-color: rgb(204, 204, 204);" colspan="4" rowspan="1"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="background-color: rgb(204, 204, 204);" colspan="4" rowspan="1"></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td rowspan="1">Paris</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td colspan="12" rowspan="1" style="background-color: rgb(204, 204, 204);"></td>
+            <td colspan="4" rowspan="1" style="background-color: rgb(204, 204, 204);"></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <p><a href="#" id="transposButton">Do it.</a></p>
+    </table>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script>
+        let inDynamicEditMode   = true;  
+        $("a#transposButton").click(function(){
+          inDynamicEditMode ^= true;            
+          if(inDynamicEditMode == 0){
+            var header = document.getElementById('theader').value;
+            var footer = document.getElementById('tfooter').value;          
+         
+            swap(header, footer);
+          }else{
+            location.reload();
+          }
+        });
+        
+          function swap(header, footer){
+          console.log(header+":"+footer);
+          console.time();
+          const transpose = m => m[0].map((x, i) => m.map(x => x[i]));
+          const table = document.getElementById("transposed");
+          const rows = Array.from(table.querySelectorAll("tr"));
+          const totalRowCount = rows.length;
+
+          const m = new Array(totalRowCount); 
+          for (let r = 0; r < totalRowCount; r++) {
+            const row = rows[r];
+            const cells = Array.from(row.querySelectorAll("td"));
+            m[r] = [];
+            for (let c = 0; c < cells.length; c++) {
+              const cell = cells[c];
+              let rowspan = cell.getAttribute("rowspan");
+              let colspan = cell.getAttribute("colspan");
+              rowspan = parseInt(rowspan, 10);
+              colspan = parseInt(colspan, 10);   
+              
+              cell.setAttribute("colspan", rowspan);
+              cell.setAttribute("rowspan", colspan);              
+
+              m[r].push({
+              element: cell,
+              index: c,
+              rowspan: rowspan,
+              colspan: colspan
+              });             
+            }           
+          }
+          
+          let rowsToSpan = 0;
+          let colsToSpan = 0;
+          let cellsToInject = new Array(m.length);
+          for (let r = 0; r < m.length; r++) {
+            let colSpannedCells = m[r].filter(c => c.colspan && c.colspan > 1);
+            cellsToInject[r] = new Array(colSpannedCells.length);
+            for (let c = 0; c < colSpannedCells.length; c++) {
+                let cell = colSpannedCells[c];
+                cellsToInject[r].push({
+                index: cell.index,
+                cells: new Array(cell.colspan - 1)
+                });
+            }
+          }
+          var r = 0;
+          for (let row of cellsToInject) {
+            if (row && row.length) {
+              var injectIndex = 0;
+              var injectCount = 0;
+              for (let col of row) {
+                if (col && col.cells.length) {
+                  col.cells.fill({
+                  element: null,
+                  rowspan: null,
+                  colspan: null
+                  });
+                    
+                  injectIndex = col.index + injectCount + 1;
+                  Array.prototype.splice.apply(m[r], [injectIndex, 0, ...col.cells]);  
+                  injectCount += col.cells.length;
+                }
+              }
+            }
+            r++;
+          }
+
+          var transposed = transpose(m);
+          // console.log(transposed)
+
+          table.removeChild(table.querySelector("tbody"));
+          let tbody = document.createElement("tbody");
+          if(header>0 && footer>0){
+            const arr = transposed[header-1]
+            
+            for(var i=header-1; i>1; i--){
+              transposed[i] = transposed[i-1];
+              transposed[i][0].index += 1
+              transposed[i][1].index += 1
+              transposed[i][2].index += 1
+              transposed[i][3].index += 1
+            }
+            transposed[1]=arr;
+            transposed[1][0].index = 1;
+            transposed[1][1].index = 1;
+            transposed[1][2].index = 1;
+            transposed[1][3].index = 1;
+          }
+          // console.log(transposed );
+          
+          for (let rw of transposed) {
+            const row = document.createElement("tr");
+            for (let ce of rw) {
+              if (ce && ce.element) {
+              row.appendChild(ce.element);
+              }
+            }
+            tbody.appendChild(row);
+          }
+          table.appendChild(tbody);
+          console.timeEnd();
+        };
+    </script>
+    
+</body>
+</html>
