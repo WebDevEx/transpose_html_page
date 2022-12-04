@@ -1,315 +1,328 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-  <style>
-    table {
-      cursor: pointer;
-      border-collapse: collapse ;
-      font-size: 12px;
-    }
-    table:hover {
-      opacity: 0.8;
-    }
-    table tr:first-child {
-      color: #ffffff;
-      background-color: #639187;
-    }
+    <style>
+        table {
+            cursor: pointer;
+            border-collapse: collapse;
+            font-size: 12px;
+        }
 
-    table tr td:first-child {
-      color: #ffffff;
-      background-color: #639187;
-    }
-    td {
-      width: 25px;
-      border: 1px solid black;
-    }
-    tfoot td {
-      background-color: black;
-    }
+        table:hover {
+            opacity: 0.8;
+        }
 
-  </style>
+        table tr:first-child {
+            color: #ffffff;
+            background-color: #639187;
+        }
+
+        table tr td:first-child {
+            color: #ffffff;
+            background-color: #639187;
+        }
+
+        td {
+            width: 25px;
+            border: 1px solid black;
+        }
+
+        tfoot td {
+            background-color: black;
+        }
+
+    </style>
 
 </head>
 <body>
 <table class="xpure-table" id="table_a">
-  <thead>
-  <tr>
-    <td></td>
-    <td colspan="1">9:00</td>
-    <td colspan="1">9:15</td>
-    <td colspan="1">9:30</td>
-    <td colspan="1">9:45</td>
-    <td colspan="1">10:00</td>
-    <td colspan="1">10:15</td>
-    <td colspan="1">10:30</td>
-    <td colspan="1">10:45</td>
-    <td colspan="1">11:00</td>
-    <td colspan="1">11:15</td>
-    <td colspan="1">11:30</td>
-    <td colspan="1">11:45</td>
-    <td colspan="1">12:00</td>
-    <td colspan="1">12:15</td>
-    <td colspan="1">12:30</td>
-    <td colspan="1">12:45</td>
-    <td colspan="1">13:00</td>
-    <td colspan="1">13:15</td>
-    <td colspan="1">13:30</td>
-    <td colspan="1">13:45</td>
-    <td colspan="1">14:00</td>
-    <td colspan="1">14:15</td>
-    <td colspan="1">14:30</td>
-    <td colspan="1">14:45</td>
-    <td colspan="1">15:00</td>
-    <td colspan="1">15:15</td>
-    <td colspan="1">15:30</td>
-    <td colspan="1">15:45</td>
-    <td colspan="1">16:00</td>
-    <td colspan="1">16:15</td>
-    <td colspan="1">16:30</td>
-    <td colspan="1">16:45</td>
-    <td colspan="1">17:00</td>
-    <td colspan="1">17:15</td>
-    <td colspan="1">17:30</td>
-    <td colspan="1">17:45</td>
-    <td colspan="1">18:00</td>
-    <td>Status</td>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td rowspan="1">Madrid</td>
-    <td style="background-color: rgb(204, 204, 204);" colspan="4" rowspan="1"></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td style="background-color: rgb(204, 204, 204);" colspan="4" rowspan="1"></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td rowspan=3></td>
-  </tr>
-  <tr>
-    <td rowspan="1">London</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td style="background-color: rgb(204, 204, 204);" colspan="4" rowspan="1"></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td style="background-color: rgb(204, 204, 204);" colspan="4" rowspan="1"></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td style="background-color: rgb(204, 204, 204);" colspan="4" rowspan="1"></td>
-    <td></td>
+    <thead>
+    <tr>
+        <td></td>
+        <td colspan="1">9:00</td>
+        <td colspan="1">9:15</td>
+        <td colspan="1">9:30</td>
+        <td colspan="1">9:45</td>
+        <td colspan="1">10:00</td>
+        <td colspan="1">10:15</td>
+        <td colspan="1">10:30</td>
+        <td colspan="1">10:45</td>
+        <td colspan="1">11:00</td>
+        <td colspan="1">11:15</td>
+        <td colspan="1">11:30</td>
+        <td colspan="1">11:45</td>
+        <td colspan="1">12:00</td>
+        <td colspan="1">12:15</td>
+        <td colspan="1">12:30</td>
+        <td colspan="1">12:45</td>
+        <td colspan="1">13:00</td>
+        <td colspan="1">13:15</td>
+        <td colspan="1">13:30</td>
+        <td colspan="1">13:45</td>
+        <td colspan="1">14:00</td>
+        <td colspan="1">14:15</td>
+        <td colspan="1">14:30</td>
+        <td colspan="1">14:45</td>
+        <td colspan="1">15:00</td>
+        <td colspan="1">15:15</td>
+        <td colspan="1">15:30</td>
+        <td colspan="1">15:45</td>
+        <td colspan="1">16:00</td>
+        <td colspan="1">16:15</td>
+        <td colspan="1">16:30</td>
+        <td colspan="1">16:45</td>
+        <td colspan="1">17:00</td>
+        <td colspan="1">17:15</td>
+        <td colspan="1">17:30</td>
+        <td colspan="1">17:45</td>
+        <td colspan="1">18:00</td>
+        <td>Status</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td rowspan="1">Madrid</td>
+        <td style="background-color: rgb(204, 204, 204);" colspan="4" rowspan="1"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td style="background-color: rgb(204, 204, 204);" colspan="4" rowspan="1"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td rowspan=3></td>
+    </tr>
+    <tr>
+        <td rowspan="1">London</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td style="background-color: rgb(204, 204, 204);" colspan="4" rowspan="1"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td style="background-color: rgb(204, 204, 204);" colspan="4" rowspan="1"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td style="background-color: rgb(204, 204, 204);" colspan="4" rowspan="1"></td>
+        <td></td>
 
-  </tr>
-  <tr>
-    <td rowspan="1">Paris</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td colspan="12" rowspan="1" style="background-color: rgb(204, 204, 204);"></td>
-    <td colspan="4" rowspan="1" style="background-color: rgb(204, 204, 204);"></td>
-    <td></td>
+    </tr>
+    <tr>
+        <td rowspan="1">Paris</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="12" rowspan="1" style="background-color: rgb(204, 204, 204);"></td>
+        <td colspan="4" rowspan="1" style="background-color: rgb(204, 204, 204);"></td>
+        <td></td>
 
-  </tr>
-  </tbody>
-  <tfoot>
-  <tr>
-    <td rowspan="1">Status</td>
-    <td style="background-color: rgb(204, 204, 204);" colspan="4" rowspan="1"></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td style="background-color: rgb(204, 204, 204);" colspan="4" rowspan="1"></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  </tfoot>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td rowspan="1">Status</td>
+        <td style="background-color: rgb(204, 204, 204);" colspan="4" rowspan="1"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td style="background-color: rgb(204, 204, 204);" colspan="4" rowspan="1"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    </tfoot>
 </table>
 
 
 <script>
-  $("table").click(function () {
-    swap($(this));
-  })
+    $("table").click(function () {
+        swap($(this), 1, 1);
+    })
 
-  // i accidentally deleted this and am now trying to recreate it...
+    // i accidentally deleted this and am now trying to recreate it...
 
-  /**
-   * @param table   DOM element, jQuery object, jQuery selector, or integer
-   */
-  function swap(table, numHeadRows, numFootRows) {
-    if (typeof table == 'string') table = $(table)
-    else if (table instanceof jQuery) table = table[0]
-    else if (table && typeof table == 'object' && table.id) table = table
-    else table = $(this)[0]   //
+    /**
+     * @param table   DOM element, jQuery object, jQuery selector, or integer
+     */
+    function swap(table, numHeadRows, numFootRows) {
+        if (typeof table == 'string') table = $(table)
+        else if (table instanceof jQuery) table = table[0]
+        else if (table && typeof table == 'object' && table.id) table = table
+        else table = $(this)[0]   //
 
-    const transpose = (m) => m[0].map((x, i) => m.map((x) => x[i]));
-    const rows = Array.from(table.querySelectorAll("tr"));
-    const totalRowCount = rows.length;
+        const transpose = (m) => m[0].map((x, i) => m.map((x) => x[i]));
+        const rows = Array.from(table.querySelectorAll("tr"));
+        const totalRowCount = rows.length;
 
-    const m = new Array(totalRowCount);
-    for (let r = 0; r < totalRowCount; r++) {
-      const row = rows[r];
-      const cells = Array.from(row.querySelectorAll("td"));
-      m[r] = [];
-      for (let c = 0; c < cells.length; c++) {
-        const cell = cells[c];
-        let rowspan = cell.getAttribute("rowspan");
-        let colspan = cell.getAttribute("colspan");
-        rowspan = parseInt(rowspan, 10);
-        colspan = parseInt(colspan, 10);
+        const m = new Array(totalRowCount);
+        for (let r = 0; r < totalRowCount; r++) {
+            const row = rows[r];
+            const cells = Array.from(row.querySelectorAll("td"));
+            m[r] = [];
+            for (let c = 0; c < cells.length; c++) {
+                const cell = cells[c];
+                let rowspan = cell.getAttribute("rowspan");
+                let colspan = cell.getAttribute("colspan");
+                rowspan = parseInt(rowspan, 10);
+                colspan = parseInt(colspan, 10);
 
-        if (rowspan) cell.setAttribute("colspan", rowspan);
-        if (colspan) cell.setAttribute("rowspan", colspan);
+                if (rowspan) cell.setAttribute("colspan", rowspan);
+                if (colspan) cell.setAttribute("rowspan", colspan);
 
-        m[r].push({
-          element: cell,
-          index: c,
-          rowspan: rowspan || undefined,
-          colspan: colspan|| undefined
-        });
-      }
-    }
-
-    let rowsToSpan = 0;
-    let colsToSpan = 0;
-    let cellsToInject = new Array(m.length);
-    for (let r = 0; r < m.length; r++) {
-      let colSpannedCells = m[r].filter((c) => c.colspan && c.colspan > 1);
-      cellsToInject[r] = new Array(colSpannedCells.length);
-      for (let c = 0; c < colSpannedCells.length; c++) {
-        let cell = colSpannedCells[c];
-        cellsToInject[r].push({
-          index: cell.index,
-          cells: new Array(cell.colspan - 1)
-        });
-      }
-    }
-    var r = 0;
-    for (let row of cellsToInject) {
-      if (row && row.length) {
-        var injectIndex = 0;
-        var injectCount = 0;
-        for (let col of row) {
-          if (col && col.cells.length) {
-            col.cells.fill({
-              element: null,
-              rowspan: null,
-              colspan: null
-            });
-
-            injectIndex = col.index + injectCount + 1;
-            Array.prototype.splice.apply(m[r], [injectIndex, 0, ...col.cells]);
-            injectCount += col.cells.length;
-          }
+                m[r].push({
+                    element: cell,
+                    index: c,
+                    rowspan: rowspan || undefined,
+                    colspan: colspan || undefined
+                });
+            }
         }
-      }
-      r++;
-    }
 
-    const transposed = transpose(m);
-
-    table.removeChild(table.querySelector("tbody"));
-    let tbody = document.createElement("tbody");
-
-    for (let rw of transposed) {
-      const row = document.createElement("tr");
-      for (let ce of rw) {
-        if (ce && ce.element) {
-          row.appendChild(ce.element);
+        let rowsToSpan = 0;
+        let colsToSpan = 0;
+        let cellsToInject = new Array(m.length);
+        for (let r = 0; r < m.length; r++) {
+            let colSpannedCells = m[r].filter((c) => c.colspan && c.colspan > 1);
+            cellsToInject[r] = new Array(colSpannedCells.length);
+            for (let c = 0; c < colSpannedCells.length; c++) {
+                let cell = colSpannedCells[c];
+                cellsToInject[r].push({
+                    index: cell.index,
+                    cells: new Array(cell.colspan - 1)
+                });
+            }
         }
-      }
-      tbody.appendChild(row);
+        var r = 0;
+        for (let row of cellsToInject) {
+            if (row && row.length) {
+                var injectIndex = 0;
+                var injectCount = 0;
+                for (let col of row) {
+                    if (col && col.cells.length) {
+                        col.cells.fill({
+                            element: null,
+                            rowspan: null,
+                            colspan: null
+                        });
+
+                        injectIndex = col.index + injectCount + 1;
+                        Array.prototype.splice.apply(m[r], [injectIndex, 0, ...col.cells]);
+                        injectCount += col.cells.length;
+                    }
+                }
+            }
+            r++;
+        }
+
+        const transposed = transpose(m);
+
+        table.removeChild(table.querySelector("thead"));
+        table.removeChild(table.querySelector("tbody"));
+        table.removeChild(table.querySelector("tfoot"));
+
+        let thead = document.createElement("thead");
+        let tbody = document.createElement("tbody");
+        let tfoot = document.createElement("tfoot")
+
+        for (let i = 0; i < transposed.length; i++) {
+            let rw = transposed[i]
+            const row = document.createElement("tr");
+            for (let ce of rw) {
+                if (ce && ce.element) {
+                    row.appendChild(ce.element);
+                }
+            }
+            if (numHeadRows > 0 && i < numHeadRows) thead.appendChild(row)
+            else if (numFootRows > 0 && i > (transposed.length - numFootRows - 1)) tfoot.appendChild(row)
+            else tbody.appendChild(row);
+        }
+        if (numHeadRows > 0) table.appendChild(thead)
+        table.appendChild(tbody);
+        if (numFootRows > 0) table.appendChild(tfoot)
     }
-    table.appendChild(tbody);
-    console.timeEnd();
-  }
 
 </script>
 
