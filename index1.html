@@ -252,7 +252,7 @@
           table.removeChild(table.querySelector("tbody"));
           let tbody = document.createElement("tbody");
           if(header>0 && footer>0){
-            const arr = transposed[header-1]
+            const arrh = transposed[header-1]
             
             for(var i=header-1; i>1; i--){
               transposed[i] = transposed[i-1];
@@ -261,11 +261,23 @@
               transposed[i][2].index += 1
               transposed[i][3].index += 1
             }
-            transposed[1]=arr;
+            transposed[1]=arrh;
+
             transposed[1][0].index = 1;
             transposed[1][1].index = 1;
             transposed[1][2].index = 1;
             transposed[1][3].index = 1;
+            
+            const arrf = transposed[footer-1];
+            console.log(arrf)
+            console.log("foot"+":"+ transposed.length);
+            for(var i=footer-1; i<transposed.length; i++){
+              
+              transposed[i] = transposed[i+1];              
+            }
+
+            transposed[transposed.length-1] = arrf;
+            
           }
           // console.log(transposed );
           
