@@ -15,6 +15,9 @@
     td{
         width: 25px;
     }
+    table thead, tfoot{
+      background-color: blue;
+    }
 </style>
 
 </head>
@@ -251,6 +254,8 @@
 
           table.removeChild(table.querySelector("tbody"));
           let tbody = document.createElement("tbody");
+          let thead = document.createElement("thead");
+          let tfoot = document.createElement("tfoot");
           if(header>0 && footer>0){
             const arrh = transposed[header-1]
             
@@ -275,22 +280,61 @@
               
               transposed[i] = transposed[i+1];              
             }
-
-            transposed[transposed.length-1] = arrf;
-            
+            transposed[transposed.length-1] = arrf;            
           }
           // console.log(transposed );
-          
-          for (let rw of transposed) {
+
+          theader = [transposed[0], transposed[1]];
+          console.log(theader)
+          for (let rw of theader) {
             const row = document.createElement("tr");
             for (let ce of rw) {
               if (ce && ce.element) {
               row.appendChild(ce.element);
               }
             }
+            thead.appendChild(row);
+          }
+          table.appendChild(thead);
+
+          // transposed = transposed.slice(2,transposed/length);
+          var arrbody = [];
+          for(i=0; i<transposed.length-3; i++){
+            arrbody[i] = transposed[i+2];
+            arrbody[i][0].index = transposed[i+2][0].index-2;
+            arrbody[i][1].index = transposed[i+2][1].index-2;
+            arrbody[i][2].index = transposed[i+2][2].index-2;
+            arrbody[i][3].index = transposed[i+2][3].index-2;
+          }
+          
+          for (let rw of arrbody) {
+            const row = document.createElement("tr");
+            for (let ce of rw) {
+              if (ce && ce.element) {
+              row.appendChild(ce.element);
+              }
+            }
+            // console.log(row);
             tbody.appendChild(row);
           }
           table.appendChild(tbody);
+
+          arrbody = [transposed[transposed.length-1]];
+          arrbody[0][0].index = 0;
+         
+          console.log(arrbody)
+          for (let rw of arrbody) {
+            const row = document.createElement("tr");
+            for (let ce of rw) {
+              if (ce && ce.element) {
+              row.appendChild(ce.element);
+              }
+            }
+            console.log(row);
+            tfoot.appendChild(row);
+          }
+          table.appendChild(tfoot);
+
           console.timeEnd();
         };
     </script>
